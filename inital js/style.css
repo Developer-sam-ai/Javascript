@@ -1,0 +1,15 @@
+body{
+    font-size:40px;
+    text-align: center;
+    color: aqua;
+}
+button{
+    color:blueviolet;
+    font-size:40px;
+    
+}
+button :active{
+    color: rgb(255, 4, 4);
+    size: 50px;
+
+}
