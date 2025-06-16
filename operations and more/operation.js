@@ -44,7 +44,7 @@ const heloo=["share",56,"youth"];
 let myobj={
     name:"ram",
     age:45,
-    
+
     count:false
 }
 // function
@@ -57,5 +57,5 @@ console.log(typeof(myfunc));
 console.log(typeof(myobj));
 //output  object 
 
-all datatype of non primitive is called functions 
-and function return is known as object function.
+// all datatype of non primitive is called functions 
+// and function return is known as object function.
