@@ -44,6 +44,7 @@ const heloo=["share",56,"youth"];
 let myobj={
     name:"ram",
     age:45,
+    
     count:false
 }
 // function
