@@ -32,6 +32,7 @@ console.log(typeof agey);
 // console.log(convertsion);
 // console.log(typeof(convertsion));
 
+
 // Notes 
 // "33"=> 33;
 // "34sf"=>NaN;

@@ -59,3 +59,5 @@ console.log(typeof(myobj));
 
 // all datatype of non primitive is called functions 
 // and function return is known as object function.
+
+
