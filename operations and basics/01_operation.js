@@ -61,3 +61,8 @@ console.log(typeof(myobj));
 // and function return is known as object function.
 
 
+
+// var a=45;
+// var a=67;
+// console.log(a);
+// console.log(a);// no error baki saglya converson la error yetay
