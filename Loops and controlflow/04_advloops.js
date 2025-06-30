@@ -85,18 +85,18 @@ const coding=['ram','raja','sada',`nisha`,`tasmay`,`raman`];
 // });
 // sucess 
 
-let obj2=[
-    {
-        1:`youtube`,
-        2:`music`,
-        3:`radha`
-    },
-    {
-        "one":`print1`,
-        "two":`print2`,
-        "three":`print3`
-    }
-];
+// let obj2=[
+//     {
+//         1:`youtube`,
+//         2:`music`,
+//         3:`radha`
+//     },
+//     {
+//         "one":`print1`,
+//         "two":`print2`,
+//         "three":`print3`
+//     }
+// ];
 // obj2.forEach((keys)=>{
      // being a string we cannot access by string write it directly
 //         console.log(keys.one);
@@ -106,4 +106,10 @@ let obj2=[
 // 2nd is for key value like 0 and 1
 // and third is for the complete array we have
 
+
+let y;
+y=Math.random();
+console.log(y*10);
+
+// console.log(y);
 
