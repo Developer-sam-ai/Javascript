@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test one</title>
+</head>
+<body style="background-color: #212121;color:antiquewhite">
+    <div class="diacid">
+        hello radha
+
+
+        <ul class="blow">monday</ul>
+        <ul class="blow">tuesday</ul>
+        <ul class="blow">wednesday</ul>
+        <ul class="blow">thursday</ul>
+    </div>
+    <!-- <div class="parent">here we are to qonwuor</div>  -->
+    <script href="01_dom.js">
+        // const selectall=document.querySelector(".diacid");
+        // let child=document.querySelector(".blow");
+        // console.log(selectall);
+        // console.log(selectall.children[0].innerHTML) ;// we got html collection
+        // for(let i=0;i<=selectall.children.length;i++){
+        //         console.log(selectall.children[i].innerHTML);
+                    
+                
+        // }
+        // here no suggestion would be given but the job is done
+        //selectall.children[0].style.color="red";
+        // selectall.children[2].style.backgroundColor="red";
+        // selectall.children[1].style.color="orange";
+        // to get first element child and lastelement child
+        // console.log(selectall.firstElementChild);
+        // console.log(selectall.lastElementChild);
+        // console.log(child.parentElement);
+        // console.log(child.nextElementSibling);
+
+        // console.log("nodes: ",selectall.childNodes);
+        
+                    // Creating an element
+        const saved=document.createElement("div");
+        
+        console.log(saved);
+        saved.classname="radha";
+        document.getElementsByClassName("radha");
+        saved.id=Math.random()*10+10;
+        saved.setAttribute("title","hello si");
+        saved.style.backgroundColor="red";
+        saved.style.padding="20px";
+        //saved.innerText="i must get an internship";
+        // inner text will override the text which ever is present inside the 
+        // div  we prefer setattribute more than the innertext
+        const added=document.createTextNode("hi sam");
+        console.log(added)
+        saved.appendChild(added);
+
+        document.body.appendChild(saved);
+    </script>
+</body>
+</html>

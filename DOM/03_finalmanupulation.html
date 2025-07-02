@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finaldom</title>
+</head>
+<body style="background-color: #212121;color: aliceblue;">
+    <title>samesa must be a company</title>
+    <ul class="essentials">
+        <li>hello</li>
+        <li> we are</li>
+        <li>together</li>
+    </ul>
+    <script>
+        function added(name){
+            const created=document.createElement("li");
+            created.innerText=`we will be the best ${name} `;
+            created.style.backgroundColor="cyan";
+            created.style.color="black";
+            created.style.fontsize="24px";
+            //document.querySelector(".essentials").appendChild("li");
+            created.setAttribute("class","new1");
+            document.body.appendChild(created);
+        }
+        added("radha");
+
+        function try2(){
+            const herhe=document.createElement("li");
+            herhe.style.backgroundColor="red";
+            //herhe.style.color="black";
+            herhe.innerHTML="we are here";
+            herhe.innerText="inner text";
+            document.querySelector('.essentials').appendChild(herhe);
+            
+        }
+        try2();
+    </script>
+</body>
+</html>
