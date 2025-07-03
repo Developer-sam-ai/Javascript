@@ -24,6 +24,9 @@
             document.body.appendChild(created);
         }
         added("radha");
+        added("shyam")
+        // here we can have a optimisation issue as the number of times the 
+        // 
 
         function try2(){
             const herhe=document.createElement("li");
@@ -35,6 +38,48 @@
             
         }
         try2();
+        // making it by optimised way
+        function optimised(langname){
+            const li=document.createElement("li");
+            // li.textContent=`hello i am ${langname}`;
+            li.appendChild(document.createTextNode(langname));
+            //li.textContent=`hello i am ${langname}`;
+
+            // Imp 
+            // here we conclude that by adding a text node the content will remain the same it will append it to the last of the structure but 
+            // When we add textContent we actually replace the existing meanse ovveride it
+            // always appendchild more optimised
+            document.querySelector(".essentials").appendChild(li);
+        }
+        optimised("Java");
+
+        // Editing VAlues
+        const replace=document.querySelector("li:nth-child(2)");
+        const replacement=document.createElement("li");
+        replacement.textContent="mojang";
+        replace.replaceWith(replacement);
+
+        //try 1
+        const parent=document.getElementsByClassName("essentials")[0];
+        // here it is to give access to the first element and is harder than replace with method
+        const rep1=document.querySelector("li:nth-child(4)");
+        // or method for selecting child
+        const oldchild=document.querySelector("li:first-child");
+        console.log(oldchild.innerHTML);
+        // use inner html or innertext here to access the content or will show a drop down menu
+        const replement=document.createElement("li");
+        replement.textContent="java script";
+        parent.replaceChild(replement,rep1);
+        
+
+        // edit 
+        const toedit=document.querySelector("li:nth-child(2)");
+        toedit.outerHTML=`<li>lets go</li>`
+        // kind of object 
+        // remove
+        const lastlast=document.querySelector("li:nth-child(5)");
+        lastlast.remove();
+        // java gets removed
     </script>
 </body>
 </html>

@@ -1,0 +1,83 @@
+
+#header{
+    height: 80px;
+    display: flex;
+    color: black;
+    justify-content: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #6b6b6b, #8725dc);
+    border-radius: 10px;
+}
+p{
+    margin: 25px;
+    display: flex;
+    font-size: 20px;
+    margin-top:26px;
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ho{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.log{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.hello{
+    display: flex;
+    margin-left: 0px;
+    justify-content: left;
+    
+}
+contact{
+    font-weight: 300;
+}
+button{
+    font-size: large;
+    border-radius: 10px;
+}
+
+
+.define{
+    display: flex;
+    justify-content: center;
+}
+
+#yellow{
+    height: 30px;
+    padding: 30px;
+    background-color: rgb(163, 252, 62);
+    color: black;
+    margin-right: 12px;
+}
+#blue{
+    height: 30px;
+    color: black;
+    padding: 30px;
+    background-color: #2e4aff;
+    margin-right: 12px;
+}
+#red{
+    height: 30px;
+    padding: 30px;
+    background-color: rgb(244, 38, 38);
+    color: black;
+    margin-right: 12px;
+}
+#grey{
+    height: 30px;
+    padding: 30px;
+    background-color: rgb(137, 137, 137);
+    color: black;
+    margin-right: 12px;
+}
+.all{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 300px;
+    padding-left: 150px;
+    padding-top: 150px;
+}

@@ -1,0 +1,102 @@
+
+#header{
+    height: 80px;
+    display: flex;
+    color: black;
+    justify-content: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #51a9f6, #a53eff);
+    border-radius: 10px;
+}
+p{
+    margin: 25px;
+    display: flex;
+    font-size: 20px;
+    margin-top:26px;
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ho{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.log{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.hello{
+    display: flex;
+    margin-left: 0px;
+    justify-content: left;
+    
+}
+contact{
+    font-weight: 300;
+}
+button{
+    font-size: large;
+    border-radius: 10px;
+}
+
+
+.space{
+    height: 40px;
+}
+.full{
+    position: absolute;
+    top: 0; left:0;
+    width: 100%;height: 100%;
+    z-index: 1;
+}
+.clrchanger{
+    background-color: aquamarine;
+    font-size: large;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-image:url('clr.jpeg');
+    background-size: cover;
+    contain: content;
+    text-decoration: none;
+    
+}
+
+.bmi{
+    color: rgb(0, 0, 0);               /* High contrast */
+    font-size: 36px;            /* Larger size */
+    font-weight: bolder;          /* Bold makes it pop */
+    padding: 30px;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-image: url('BMI.jpeg');
+    background-size: 200px;
+    
+    
+}
+.clock{
+    background-color: rgb(59, 167, 72);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.guessnumber{
+    background-color: rgb(167, 59, 82);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.last{
+    display: flex;
+    height: 30px;
+    font-weight: 400;
+}
+footer{
+    padding-top: 60px;
+}
