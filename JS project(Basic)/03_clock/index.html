@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        #header{
+    height: 80px;
+    display: flex;
+    color: black;
+    justify-content: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #8fe1ff, #251f92);
+    border-radius: 10px;
+}
+p{
+    margin: 25px;
+    display: flex;
+    font-size: 20px;
+    margin-top:26px;
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: linear-gradient(to right,#251f92,#8fe1ff);
+}
+.ho{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.log{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.hello{
+    display: flex;
+    margin-left: 0px;
+    justify-content: left;
+    
+}
+contact{
+    font-weight: 300;
+}
+button{
+    font-size: large;
+    border-radius: 10px;
+}
+.bigbox{
+    height:  600px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.here{
+    background-color: rgb(152, 215, 255);
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px;
+    }
+.class{
+    font-size: 20px;
+    color: aliceblue;
+    background-color: #fff;
+    }
+.name{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.clock{
+    height: 30px;
+    background-color: #fff;
+    width: 30px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    width: 80%;
+    height: 70%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+</style>
+</head>
+<body>
+    <header id="header">
+        <d class="hello">
+        <p id="home"><button><a href="../index.html" class="ho">Home</button></a></p>
+        <p id="contact" href="#">Contact us </p>
+        <p href="#">Other</p>
+        <p>Settings</p> 
+        </d>
+        <p id="login"><button><a href="" class="log">Login</button></a></p>
+    </header>
+    <div class="bigbox">
+    <div class="here">
+    <div class="name">Local Time</div>
+    <div class="clock"></div>
+    </div>
+    </div>
+    <script src="clock.js"></script>
+</body>
+</html>

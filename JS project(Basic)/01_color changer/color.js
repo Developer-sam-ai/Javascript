@@ -3,7 +3,7 @@ const body=document.querySelector("body");
 
     change.forEach(function(button){
         // console.log(lang);
-        button.addEventListener('dblclick',function(e){
+        button.addEventListener('click',function(e){
             console.log(e)
             console.log(e.target);
                     switch(e.target.id){

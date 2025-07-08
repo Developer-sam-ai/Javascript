@@ -1,0 +1,78 @@
+#header{
+    height: 80px;
+    display: flex;
+    color: black;
+    justify-content: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #f8fb98, #622399);
+    border-radius: 10px;
+}
+p{
+    margin: 25px;
+    display: flex;
+    font-size: 20px;
+    margin-top:26px;
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ho{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.log{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.hello{
+    display: flex;
+    margin-left: 0px;
+    justify-content: left;
+    
+}
+contact{
+    font-weight: 300;
+}
+button{
+    font-size: large;
+    border-radius: 10px;
+}
+
+.bigbox{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+.smallbox{
+    background:linear-gradient(to right,#622399,#f8fb98);
+    width: 600px;
+    justify-content: center;
+    display: flex;
+    height: 450px;
+    flex-direction: column;
+    align-items: center;
+}
+.section1{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input{
+    height: 40px;
+    margin-top: 17px;
+}
+.enter3{
+    height: 30px;
+    margin-top: 25px;
+}
+.para{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 0px;
+}

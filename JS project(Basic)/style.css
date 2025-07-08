@@ -40,15 +40,18 @@ button{
     border-radius: 10px;
 }
 
-
+.projects{
+    text-decoration: none;
+    display: block;
+    color: white;
+}
 .space{
     height: 40px;
 }
 .full{
     position: absolute;
-    top: 0; left:0;
-    width: 100%;height: 100%;
-    z-index: 1;
+
+    inset: 0;
 }
 .clrchanger{
     background-color: aquamarine;
@@ -75,7 +78,8 @@ button{
     margin-bottom: 20px;
     background-image: url('BMI.jpeg');
     background-size: 200px;
-    
+    text-decoration: none;
+    contain: content;
     
 }
 .clock{
@@ -84,6 +88,8 @@ button{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    text-decoration: none;
+    contain: content;
 }
 .guessnumber{
     background-color: rgb(167, 59, 82);
@@ -91,6 +97,8 @@ button{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    text-decoration: none;
+    contain: content;
 }
 .last{
     display: flex;
