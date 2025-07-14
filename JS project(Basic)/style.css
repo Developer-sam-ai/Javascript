@@ -90,9 +90,11 @@ button{
     margin-bottom: 20px;
     text-decoration: none;
     contain: content;
+    background-image: url("clock.jpeg");
+    background-size: auto;
 }
 .guessnumber{
-    background-color: rgb(167, 59, 82);
+    background:linear-gradient(to right,rgb(162, 127, 181),cyan);
     padding: 30px;
     display: flex;
     justify-content: center;
