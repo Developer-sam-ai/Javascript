@@ -68,7 +68,7 @@ button{
 }
 
 .bmi{
-    color: rgb(0, 0, 0);               /* High contrast */
+    background-color: #79befa;    /* High contrast */
     font-size: 36px;            /* Larger size */
     font-weight: bolder;          /* Bold makes it pop */
     padding: 30px;
@@ -76,21 +76,20 @@ button{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    background-image: url('BMI.jpeg');
     background-size: 200px;
     text-decoration: none;
     contain: content;
     
 }
 .clock{
-    background-color: rgb(59, 167, 72);
+    /* background-color: rgb(59, 167, 72); */
+    background:linear-gradient(to right,rgb(245, 247, 247),blue);
     padding: 30px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     text-decoration: none;
     contain: content;
-    background-image: url("clock.jpeg");
     background-size: auto;
 }
 .guessnumber{
