@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 > hello sam</h1>
+    <p class="get">sam can get a job at google</p>
+    <button id="start">start</button>
+    <button id="button"> stop</button>
+
+    <script>
+    const button=document.querySelector("#button");
+    const get=document.querySelector(".get");
+    const strtbutton=document.querySelector("#start");
+    // button.addEventListener("click",()=>{
+    //     console.log("aaah");
+    // })
+
+    // setTimeout(()=>{
+    //     get.textContent="lets go ";
+    // },2000)
+
+    // const sam=function(){
+    //     console.log("hello we are here");
+    //     get.innerHTML="radha";
+    // }
+    // just passed refrence of the things
+    // setTimeout(sam,3000);
+    // hold this to a variable 
+
+    // const stop=setTimeout(sam,3000);
+
+
+    // we can hold the things in a variable by passing refence of the settimeout as well;
+    // we have the function clear timeout for stoping the execution
+
+    // button.addEventListener("click",()=>{
+    //     clearTimeout(stop);
+        // here we have to remember that to pass the stop as a parameter here
+        // console.log("working");
+    // })
+
+    // set interval
+    let interval;
+    strtbutton.addEventListener("click",()=>{
+        // interval;
+        
+        interval=setInterval(date,1000,"hi");
+        console.log("hello 1");
+    })
+    const date=function(){
+        get.textContent=Date.now();
+    }
+    // const interval=setInterval(date,1000);
+    button.addEventListener("click",()=>{
+        clearInterval(interval);
+        
+    })
+    
+    </script>
+</body>
+</html>

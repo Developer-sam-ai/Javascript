@@ -93,7 +93,16 @@ button{
     background-size: auto;
 }
 .guessnumber{
-    background:linear-gradient(to right,rgb(162, 127, 181),cyan);
+    background:linear-gradient(to right,rgb(226, 215, 232),rgb(33, 246, 246));
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    contain: content;
+}
+.conticlr{
+    background:linear-gradient(to right,rgb(211, 198, 218),rgb(176, 25, 235));
     padding: 30px;
     display: flex;
     justify-content: center;

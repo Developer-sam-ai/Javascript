@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+#header{
+    height: 80px;
+    display: flex;
+    color: black;
+    justify-content: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #628ace, #bc6aff);
+    border-radius: 10px;
+}
+p{
+    margin: 25px;
+    display: flex;
+    font-size: 20px;
+    margin-top:26px;
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ho{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.log{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.hello{
+    display: flex;
+    margin-left: 0px;
+    justify-content: left;
+    
+}
+contact{
+    font-weight: 300;
+}
+button{
+    font-size: large;
+    border-radius: 10px;
+}
+        .diver{
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            font-size:large;
+            font-weight: bold;
+    }
+
+    </style>
+</head>
+<body style="background-color:rgb(130, 129, 128)">
+
+    <header id="header">
+        <d class="hello">
+        <p id="home"><button><a href="../index.html" class="ho">Home</button></a></p>
+        <p id="contact" href="#">Contact us </p>
+        <p href="#">Other</p>
+        <p>Settings</p> 
+        </d>
+        <p id="login"><button><a href="" class="log">Login</button></a></p>
+    </header>
+    <h1>Select the start to change colours</h1>
+    <div class="diver">
+    <button id="start" class="box"> start </button>
+    <button id="stop" class="box"> stop</button>
+    </div>
+
+    <script>
+    const start=document.querySelector("#start");
+    const stop=document.querySelector("#stop");
+    const body=document.querySelector("body");
+    let backgr;
+    
+    const randomclr=function(){
+    const hex='0123456789ABCDEF'
+    let color="#";
+    for(let i=0;i<=5;i++){
+        color+=hex[Math.floor(Math.random()*16)];
+    }
+    return color;
+}
+    
+// console.log(randomclr());
+    // to tackle the problem of reclick and more it is no winitializing agian and chnaging the order we can put a check
+    // if(backgr==null) or !backgr
+    const change=function(){
+        
+        body.style.backgroundColor=randomclr();
+    }
+    start.addEventListener("click",()=>{
+        if(!backgr){
+            // or backgr==null
+        backgr=setInterval(change,1000);
+        console.log("lets go");
+        }
+    })
+    stop.addEventListener("click",()=>{
+        clearInterval(backgr);
+        console.log("executed");
+    })
+    </script>
+    </body>
+</body>
+</html>

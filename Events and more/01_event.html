@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event Practice Page</title>
+<style>
+    img {
+    width: 200px;
+    transition: transform 0.3s ease;
+    }
+    
+</style>
+</head>
+<body>
+
+<h2>📸 Image Gallery with Events</h2>
+
+<ol id="images">
+    <li>
+        <!-- do not add any onclick events directly to the html use it to js -->
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" class="house"  >
+    </li>
+    <li>
+    <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Girl" class="man" >
+    </li>
+    <li>
+    <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Chania" class="gulley" >
+    </li>
+</ol>
+
+<p class="google">Go to <a href="https://google.com" target="_blank" >Google</a></p>
+<script>
+    // type ,timestamp,default prevented,source element,current target
+    //position related, clint x,client y;
+    // alt key ,ctrl key,shift key and more
+    
+
+    // the thing is when we click specifically on the ul element and apply event to ol as well is it so 
+    // that if we give img tag a function then we give it to house tag then which will be printed first to se
+
+    document.querySelector("#images").addEventListener("click",function(e){
+        console.log("the image tag")
+        e.preventDefault();
+        console.log(e.target.tagName);
+        let removeall=e.target.parentNode
+        if(e.target.tagName==="IMG"){
+        removeall.remove();}
+        else{
+            console.log(removeall);
+            
+        }
+    })
+    document.querySelector(".man").addEventListener("click",function(e){
+        e.stopPropagation()            // this will stop bubbling 
+        // e.preventDefault();       this will not create a change or stop the bubbling
+        console.log("man tagu");
+        e.target;
+        let removeit=e.target.parentNode;
+        removeit.remove();
+    })
+
+    //  this will follow bubble gum first img then ol then ul to the outer and more
+    // if we write stop prorpogation then the evnt will not propogate like bubble 
+
+    document.querySelector(".google").addEventListener("click",(e)=>{
+        e.preventDefault();
+        console.log(e.target);
+        console.log(e.target.parentNode);
+    },false);
+
+    // to remove the element we can just target it and .remove()
+</script>
+</body>
+</html>
