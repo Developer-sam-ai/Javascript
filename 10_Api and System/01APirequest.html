@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:black;color:white">
+    <!-- 0 unsent clinet has been created .open() not called yet
+    1. opened open() has been called 
+    2. headers_recievered send() has been called and headers and status are available
+    3.  loading downloading :response text holds partial dtat
+    4.  Done The operation is complete  -->
+    <script>
+
+        const but=document.createElement("button");
+        but.innerText="accesing data";
+        but.className="buton";
+        document.body.appendChild(but);
+        const first=new XMLHttpRequest();
+        const bu=document.querySelector(".buton");
+        bu.addEventListener("click",(e)=>{
+        e.preventDefault();
+        first.open("get","https://api.github.com/users/sam");
+            first.onreadystatechange=function(){
+                console.log(first.readyState);
+            }
+        })
+
+        // const requestUrl='https://api.github.com/users/sam';
+        // const first=new XMLHttpRequest()   // making an object of it
+        // first.open('Get',requestUrl);
+        // first.onreadystatechange=function(){
+        //     console.log(first.readyState);
+        //     if(first.readyState===3){
+        //         const data=JSON.parse(this.responseText);
+        //         // console.log(typeof(data))
+        //         console.log(data.avatar_url);
+        //         console.log(this.responseText);
+        //         // most of the time the response is in string from URL so we need to convert it to object
+
+        //     }
+        // }
+        // first.send()
+
+        console.log(first);
+    </script>
+</body>
+</html>
