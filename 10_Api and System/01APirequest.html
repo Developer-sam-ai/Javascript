@@ -21,10 +21,28 @@
         const bu=document.querySelector(".buton");
         bu.addEventListener("click",(e)=>{
         e.preventDefault();
-        first.open("get","https://api.github.com/users/sam");
+        first.open("GET","https://api.github.com/users/torvalds");
             first.onreadystatechange=function(){
                 console.log(first.readyState);
+                if(first.readyState===3){
+                    const data =JSON.parse(this.responseText);
+                    const photo=data.avatar_url;
+                    const im=document.createElement("img");
+                    im.src=photo;
+                    im.alt="user aavtarr";
+                    im.width=150;
+                    document.body.appendChild(im);
+                }
+                if(first.readyState==4){
+                    const data1=JSON.parse(this.responseText);
+                    const follow=data1.followers;
+                    const dv=document.createElement("div");
+                    dv.className="thef";
+                    dv.innerText="follow "+follow;
+                    document.body.appendChild(dv);
+                }
             }
+            first.send();
         })
 
         // const requestUrl='https://api.github.com/users/sam';
