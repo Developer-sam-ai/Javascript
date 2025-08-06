@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #121212;color: white;">
+    <script>
+        const bigbox=document .createElement("div");
+        bigbox.className="big";
+        bigbox.style.height="150px";
+        bigbox.style.width="150px";
+        bigbox.style.backgroundColor="cyan";
+        document.body.appendChild(bigbox);
+        
+        const boxy=document.querySelector(".big");
+        boxy.addEventListener("click",function(e){
+            e.preventDefault()
+            const boxy=new XMLHttpRequest();
+            boxy.open("GET","https://api.github.com/users/sam");
+            boxy.onreadystatechange=function(){
+                console.log(boxy.readyState);
+                if(boxy.readyState===4){
+                    const data=JSON.parse(this.responseText);
+                    const photo=data.avatar_url;
+                    
+                    const imge=document.createElement("img");
+                    imge.src=photo;
+                    imge.style.width="100%";
+                    imge.style.height="100%";
+                    imge.style.objectFit="cover";
+                    bigbox.appendChild(imge);
+                    console.log(data);
+                }
+            }
+            boxy.send();
+        })
+        
+    </script>
+</body>
+</html>
