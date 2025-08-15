@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vada karo janam</title>
+</head>
+<body>
+
+    <script>
+        const promise2=new Promise(function(resolve,reject){
+    setTimeout(function(){
+        const req=new XMLHttpRequest();
+        req.open("GET","https://api.githb.com/users/sam");
+        req.onreadystatechange=function(){
+            console.log(req.readystate);
+        }
+        let error=true;
+        if(!error){
+            resolve();
+        }
+        else{
+            reject();
+        }
+        
+        req.send();
+    },1000);
+})
+
+this.resolve=function(){
+    console.log("barobar aahe may");
+}
+// this.reject=function(){
+//     document.body.style.backgroundColor="brown";
+// }
+    </script>
+</body>
+</html>
