@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121">
+    <script>
+        const dive=document.createElement("div");
+        dive.innerHTML="hello";
+        document.body.appendChild(dive);
+        const hel=document.querySelector("div");
+        hel.style.width="250px";
+        hel.style.height="250px";
+        hel.style.backgroundColor="#444";
+        const ele=new XMLHttpRequest;
+        ele.open("get","");
+        ele.onreadystatechange=function(){
+            if(ele.readyState===3){
+                try{
+                // let erro=true;
+                const res=JSON.parse(this.responseText);
+                console.log(ele);
+                console.log(res);
+                resolve();
+                }
+                catch(error){
+                    reject(error);
+                }
+            }
+            
+        }
+        ele.send();
+
+            this.resolve=()=>{
+                console.log("chaltay");
+            }
+            this.reject=function(){
+                console.log("rejeucte zhalay");
+            }
+        </script>
+</body>
+</html>
