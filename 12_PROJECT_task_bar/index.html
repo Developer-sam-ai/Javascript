@@ -12,13 +12,74 @@
         background-color: #96fdfd;border-radius: 14px; border: 2px solid #333;
         color: #303030;outline: none;transition: all 0.3 ease;}
         #add_btn{border-color: #646363;}
+
+:root {
+  --todo-bg: #e5e7eb;    /* Light Gray */
+  --todo-text: #374151;  /* Dark Gray */
+  
+  --doing-bg: #dbeafe;   /* Light Blue */
+  --doing-text: #1e40af; /* Dark Blue */
+  
+  --done-bg: #d1fae5;    /* Light Green */
+  --done-text: #065f46;  /* Dark Green */
+}
+
+.status-select {
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+
+  border: none;
+  border-radius: 50px; /* Makes it a pill shape */
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  outline: none; 
+
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.status-select:hover {
+  filter: brightness(0.95); 
+}
+
+
+
+.status-select.todo {
+  background-color: var(--todo-bg);
+  color: var(--todo-text);
+}
+
+.status-select.doing {
+  background-color: var(--doing-bg);
+  color: var(--doing-text);
+}
+
+.status-select.done {
+  background-color: var(--done-bg);
+  color: var(--done-text);
+}
+option{
+  background-color: white;
+  color: black;
+  font-weight: normal;
+}
+
     </style>
 </head>
 <body style="background-color: #212121; color: antiquewhite;">
     <h1>TASK-MANAGER</h1>
-    <!-- the input bar and the button  -->
+
     <div id="top">
         <input type="text" id="input-task" placeholder="add your task">
+        <select id="statusSelect" class="status-select todo">
+            <option value="todo">● Not Started</option>
+            <option value="doing">● In Progress</option>
+            <option value="done">● Done</option>
+        </select> 
         <button id="add_btn">add task</button>
     </div>
 </body>
