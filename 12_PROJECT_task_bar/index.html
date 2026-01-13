@@ -9,65 +9,85 @@
         #top{text-align: center;display: flex;justify-content: center; gap: 10px;
         margin-top: 20px;}
         #input-task{padding: 12px 20px;width: 300px;font-size: 16px;
-        background-color: #96fdfd;border-radius: 14px; border: 2px solid #333;
+        background-color: #c0c0c0;border-radius: 14px; border: 2px solid #333;
         color: #303030;outline: none;transition: all 0.3 ease;}
         #add_btn{border-color: #646363;}
 
-:root {
-  --todo-bg: #e5e7eb;    /* Light Gray */
-  --todo-text: #374151;  /* Dark Gray */
-  
-  --doing-bg: #dbeafe;   /* Light Blue */
-  --doing-text: #1e40af; /* Dark Blue */
-  
-  --done-bg: #d1fae5;    /* Light Green */
-  --done-text: #065f46;  /* Dark Green */
-}
-
-.status-select {
-  appearance: none; 
-  -webkit-appearance: none; 
-  -moz-appearance: none;
-
-  border: none;
-  border-radius: 50px; /* Makes it a pill shape */
-  padding: 8px 16px;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
+/* 1. The Container - Makes it look like a custom UI element */
+.cool-select {
+  appearance: none;
+  -webkit-appearance: none;
+  /* Sizing and Font */
+  width: 100%;
+  padding: 12px 20px;
+  font-family: 'Courier New', monospace; /* Techy font */
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  text-align: center;
-  outline: none; 
 
-  transition: background-color 0.2s, color 0.2s;
+  /* Colors - Dark Theme */
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 2px solid #333;
+  border-radius: 8px;
+  
+  /* The "Cool" Glow Effect on Focus */
+  outline: none;
+  transition: all 0.3s ease;
+  
+  /* Custom Arrow (The trick!) */
 }
 
-.status-select:hover {
-  filter: brightness(0.95); 
+/* Hover State */
+.cool-select:hover {
+  border-color: #555;
+  background-color: #252525;
 }
 
-
-
-.status-select.todo {
-  background-color: var(--todo-bg);
-  color: var(--todo-text);
+/* Focus State - Neon Blue Glow */
+.cool-select:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
-.status-select.doing {
-  background-color: var(--doing-bg);
-  color: var(--doing-text);
+/* 2. The Options - Styling the list items */
+option {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 10px; 
 }
 
-.status-select.done {
-  background-color: var(--done-bg);
-  color: var(--done-text);
-}
-option{
-  background-color: white;
-  color: black;
-  font-weight: normal;
+option[value="todo"] {
+  color: #ff6b6b; /* Soft Red */
 }
 
+option[value="doing"] {
+  color: #feca57; /* Soft Yellow */
+}
+
+option[value="done"] {
+  color: #1dd1a1; /* Soft Green */
+}
+
+/* //button */
+#add_btn{
+    padding: 12px 14px;
+    border-radius: 7px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    background-color: transparent;
+    color: #00d4ff;
+    /* border: 2px solid ; */
+    transition: all 0.3s ease;
+  
+}
+#add_btn:active{
+  transform: scale(.96);
+  box-shadow: 0 0 10px rgba(0,212,255,.8);
+}
     </style>
 </head>
 <body style="background-color: #212121; color: antiquewhite;">
@@ -75,12 +95,17 @@ option{
 
     <div id="top">
         <input type="text" id="input-task" placeholder="add your task">
-        <select id="statusSelect" class="status-select todo">
-            <option value="todo">● Not Started</option>
-            <option value="doing">● In Progress</option>
-            <option value="done">● Done</option>
-        </select> 
-        <button id="add_btn">add task</button>
+        <div class="select-wrapper">
+    <select class="cool-select">
+        <option value="" disabled selected>Select Status</option>
+        <option value="todo">● Not Started</option>
+        <option value="doing">● In Progress</option>
+        <option value="done">● Done</option>
+    </select></div>
+        <button id="add_btn">Add Task</button>
     </div>
+
+    <script src="script.js">
+    </script>
 </body>
 </html>
