@@ -1,0 +1,54 @@
+<form action="/submit-feedback" method="POST">
+    <h1>Service Feedback</h1>
+    <hr>
+
+    <fieldset>
+        <legend><strong>Personal Information</strong></legend>
+        <p>
+            <label for="full-name">Full Name:</label><br>
+            <input type="text" id="full-name" name="full-name" placeholder="e.g. Sam" required>
+        </p>
+        <p>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="sam@example.com" required>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><strong>Your Experience</strong></legend>
+        
+        <p>What was the primary reason for your visit?</p>
+        <select id="reason" name="reason">
+            <option value="">-- choose an option --</option>
+            <option value="support">Technical Support</option>
+            <option value="feedback">General Feedback</option>
+            <option value="other">Other</option>
+        </select>
+
+        <p>How satisfied are you? (1 = Low, 5 = High)</p>
+        <input type="range" id="satisfaction" name="satisfaction" min="1" max="5" step="1">
+        
+        <p>Would you recommend us to others?</p>
+        <input type="radio" id="yes" name="recommend" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="recommend" value="no">
+        <label for="no">No</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><strong>Detailed Comments</strong></legend>
+        <p>
+            <label for="message">What can we do better?</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your thoughts here..."></textarea>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Send Feedback</button>
+    <button type="reset">Clear Form</button>
+</form>
