@@ -44,9 +44,9 @@ function add_panel(value_of_the_text){
     const dropdownHTML = `
         <div>
         <p style="margin: 0; font-family: 'Courier New', monospace;" class="text">${value_of_the_text}</p>
-        <input type="text" class="edit-input" value="${text}" style="display: none; width: 100%; background: #1a1a1a; color: white; border: 1px solid #00d4ff; padding: 10px 12px; border-radius: 6px; outline: none; font-family: 'Courier New', monospace; font-size: 16px;">
+        <input type="text" class="edit-input" value="${value_of_the_text}" style="display: none; width: 100%; background: #1a1a1a; color: white; border: 1px solid #00d4ff; padding: 10px 12px; border-radius: 6px; outline: none; font-family: 'Courier New', monospace; font-size: 16px;">
         </div>
-        <button class="edit">edit</button>
+        <button class="Edit">Edit</button>
         <select class="status_updater">
             <option value="not_started">Not Started</option>
             <option value="in_progress">In Progress</option>
@@ -62,11 +62,33 @@ function add_panel(value_of_the_text){
             target_col.appendChild(newpanel)
         }
     })
-    const editor=newpanel.querySelector('.edit');
-    const initial_text=document.querySelector('.text');
-    editor.addEventListener('click',()=>{
-        initial_text.style.display='none';
+    const editor=newpanel.querySelector('.Edit');
+    const initial_text=newpanel.querySelector('.text');
+    const input_box=newpanel.querySelector('.edit-input')
 
+    editor.addEventListener('click',()=>{
+        if(editor.innerHTML==='Edit'){
+        initial_text.style.display='none';
+        input_box.style.display='block';
+        input_box.focus();
+
+        editor.innerText = 'Save';
+            editor.style.color = '#1dd1a1';
+            editor.style.borderColor = '#1dd1a1';
+        }
+        else {
+            if (input_box.value.trim() === "") {
+                input_box.value = initial_text.innerText; 
+            } else {
+                initial_text.innerText = input_box.value;
+            }
+            input_box.style.display = 'none';
+            initial_text.style.display = 'block';
+            
+            editor.innerText = 'Edit';
+            editor.style.color = '';
+            editor.style.borderColor = '';
+        }
     })
 
     return newpanel;
