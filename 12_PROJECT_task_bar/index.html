@@ -58,15 +58,15 @@ option {
   padding: 10px; 
 }
 
-option[value="todo"] {
+option[value="not_started"] {
   color: #ff6b6b; /* Soft Red */
 }
 
-option[value="doing"] {
+option[value="in_progress"] {
   color: #feca57; /* Soft Yellow */
 }
 
-option[value="done"] {
+option[value="_done"] {
   color: #1dd1a1; /* Soft Green */
 }
 
@@ -99,13 +99,13 @@ option[value="done"] {
         <div class="select-wrapper">
     <select class="cool-select">
         <option value="" disabled selected>Select Status</option>
-        <option value="todo">● Not Started</option>
-        <option value="doing">● In Progress</option>
-        <option value="done">● Done</option>
+        <option value="not_started">● Not Started</option>
+        <option value="in_progress">● In Progress</option>
+        <option value="_done">● Done</option>
     </select></div>
         <button id="add_btn">Add Task</button>
     </div>
-    <div style="display: flex; justify-content: space-evenly; height:200px; margin-top: 30px; background-color: #1dd1a1;">
+    <div style="display: flex; justify-content: space-evenly; height:200px; margin-top: 30px; ">
     <div class="not_started" style="flex: 1; border-right: 2px solid rgba(0, 0, 0, 0.1); text-align: center;">Not started</div>
     <div class="in_progress" style="flex: 1; border-right: 2px solid rgba(0, 0, 0, 0.1); text-align: center;">In progress</div>
     <div class="_done" style="flex: 1; text-align: center;">Done</div> </div>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam | Project Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f4f7f6; }
+        .hero-gradient { background: linear-gradient(45deg, #212529, #343a40); color: white; }
+        .card { border: none; border-radius: 12px; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">DEV.PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Tech Stack</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light ms-lg-3" href="#">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-gradient py-5">
+        <div class="container py-5 text-center">
+            <h1 class="display-3 fw-bold">Full Stack Java Developer</h1>
+            <p class="lead opacity-75">Building scalable backends and clean frontends.</p>
+            <div class="mt-4">
+                <span class="badge rounded-pill bg-primary px-3 py-2">Spring Boot</span>
+                <span class="badge rounded-pill bg-info text-dark px-3 py-2">React.js</span>
+                <span class="badge rounded-pill bg-success px-3 py-2">DSA (Java)</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <main class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card p-4 shadow-sm mb-4">
+                    <h5 class="fw-bold mb-3">Learning Progress</h5>
+                    <label class="small fw-bold">React (Chai aur Code)</label>
+                    <div class="progress mb-3" style="height: 10px;">
+                        <div class="progress-bar bg-info" style="width: 60%"></div>
+                    </div>
+                    <label class="small fw-bold">DSA (Striver A-Z)</label>
+                    <div class="progress mb-3" style="height: 10px;">
+                        <div class="progress-bar bg-success" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <h3 class="fw-bold mb-4">Active Projects</h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 p-3 shadow-sm border-start border-primary border-4">
+                            <h5 class="fw-bold">JS Task Manager</h5>
+                            <p class="text-muted small">A specialized tool for managing engineering coursework and deadlines.</p>
+                            <button class="btn btn-sm btn-dark w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#projectModal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 p-3 shadow-sm border-start border-warning border-4">
+                            <h5 class="fw-bold">GSoC Contribution</h5>
+                            <p class="text-muted small">Open source contributions for Jenkins/Rocket.Chat modules.</p>
+                            <button class="btn btn-sm btn-dark w-100 mt-auto">View Repo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Task Manager Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This project uses local storage to persist data and features a dynamic UI built with Vanilla JavaScript and Bootstrap.</p>
+                    <ul>
+                        <li>CRUD functionality</li>
+                        <li>Category filtering</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
