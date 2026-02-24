@@ -1,7 +1,7 @@
 const add_button=document.querySelector('#add_btn');
 const text_input=document.querySelector('#input-task');
 const status_main =document.querySelector('.cool-select');
-// 3 columns and the way to put the task in different things
+
 
 add_button.addEventListener('click',()=>{
     var value_of_the_text=text_input.value;
@@ -24,27 +24,25 @@ add_button.addEventListener('click',()=>{
     text_input.value = "";
 })
 
-// here we can edit the things like which things the added should have and how to add local storage i might add a weather app as well just for fun 
+
+//~ adding local storage
+
+
+
 
 function add_panel(value_of_the_text){
-    const newpanel=document.createElement('div');
-    if(value_of_the_text.trim()==""){
+    const newpanel = document.createElement('div');
+    if(value_of_the_text.trim() == ""){
         alert("enter some text bro");
         return null;
     }
-    newpanel.textContent=value_of_the_text;
-    newpanel.style.margin = '10px';
-    newpanel.style.padding = '10px';
-    newpanel.style.display="flex";
 
-    newpanel.style.backgroundColor = 'white';
-    newpanel.style.borderRadius = '5px';
-    newpanel.style.color = 'black';
-
+    // Give the main panel a class
+    newpanel.className = 'task-card';
     const dropdownHTML = `
-        <div>
-        <p style="margin: 0; font-family: 'Courier New', monospace;" class="text">${value_of_the_text}</p>
-        <input type="text" class="edit-input" value="${value_of_the_text}" style="display: none; width: 100%; background: #1a1a1a; color: white; border: 1px solid #00d4ff; padding: 10px 12px; border-radius: 6px; outline: none; font-family: 'Courier New', monospace; font-size: 16px;">
+        <div class="task-text-container">
+            <p style="margin: 0; font-family: 'Courier New', monospace;" class="text">${value_of_the_text}</p>
+            <input type="text" class="edit-input" value="${value_of_the_text}" style="display: none; width: 100%; background: #1a1a1a; color: white; border: 1px solid #00d4ff; padding: 10px 12px; border-radius: 6px; outline: none; font-family: 'Courier New', monospace; font-size: 16px;">
         </div>
         <button class="Edit">Edit</button>
         <select class="status_updater">
@@ -52,8 +50,17 @@ function add_panel(value_of_the_text){
             <option value="in_progress">In Progress</option>
             <option value="_done">Done</option>
         </select>
+        <button class="Delete" aria-label="Delete text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                <line x1="10" y1="11" x2="10" y2="17"></line>
+                <line x1="14" y1="11" x2="14" y2="17"></line>
+            </svg>
+        </button>
     `;
-    newpanel.innerHTML=dropdownHTML;
+    
+    newpanel.innerHTML = dropdownHTML;
     const select=newpanel.querySelector('.status_updater');
     select.addEventListener('change',(e)=>{
         const newstatus=e.target.value;
@@ -64,7 +71,8 @@ function add_panel(value_of_the_text){
     })
     const editor=newpanel.querySelector('.Edit');
     const initial_text=newpanel.querySelector('.text');
-    const input_box=newpanel.querySelector('.edit-input')
+    const input_box=newpanel.querySelector('.edit-input');
+    const Delete_btn=newpanel.querySelector('.Delete');
 
     editor.addEventListener('click',()=>{
         if(editor.innerHTML==='Edit'){
@@ -89,6 +97,9 @@ function add_panel(value_of_the_text){
             editor.style.color = '';
             editor.style.borderColor = '';
         }
+    })
+    Delete_btn.addEventListener('click',()=>{
+        newpanel.remove();
     })
 
     return newpanel;

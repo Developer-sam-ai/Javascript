@@ -1,0 +1,77 @@
+/* The Main Card Container */
+.task-card {
+    display: flex;
+    align-items: center; /* Vertically centers the text and buttons */
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
+    border-left: 5px solid #00d4ff; /* Cool blue accent line on the left */
+    gap: 12px; /* Space between the text, button, and dropdown */
+    color: #333333;
+}
+
+/* THE FIX: This makes the text box take up all available space */
+.task-text-container {
+    flex-grow: 1; 
+    text-align: left; 
+    overflow: hidden; /* Keeps super long text from breaking the layout */
+}
+
+/* Styling the Edit Button */
+.Edit {
+    background-color: #f1f2f6;
+    border: 1px solid #ced6e0;
+    color: #2f3542;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.Edit:hover {
+    background-color: #eccc68; /* Turns a nice subtle yellow on hover */
+    color: #2f3542;
+}
+
+/* Styling the Status Dropdown */
+.status_updater {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ced6e0;
+    background-color: #f8f9fa;
+    color: #2f3542;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* The container button for the icon */
+.Delete {
+    background-color: transparent; /* No background color by default */
+    border: none; /* No border */
+    color: #ff4d4d; /* THIS is what makes the SVG icon red! */
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%; /* Makes the hover effect circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    margin-right: 8px; /* Spacing between trash icon and dropdown */
+}
+
+/* Cool hover effect */
+.Delete:hover {
+    background-color: rgba(255, 77, 77, 0.15); /* A light red circle appears on hover */
+    transform: scale(1.1); /* Grows slightly */
+}
+
+/* Optional: Ensure the icon size is exactly what we want */
+.Delete svg {
+   width: 20px;
+   height: 20px;
+   /* 'stroke' tells the SVG to use the 'color' defined in the parent .Delete button */
+   stroke: currentColor; 
+}
