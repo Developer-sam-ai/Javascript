@@ -9,6 +9,8 @@ add_button.addEventListener('click',()=>{
     const current_status = status_main.value;
 
     var elemet_itis=add_panel(value_of_the_text);
+
+    elemet_itis.querySelector('.status_updater').value=current_status;
     if(current_status=='_done'){
         const the_done_box=document.querySelector('._done');
         the_done_box.appendChild(elemet_itis);
@@ -27,8 +29,36 @@ add_button.addEventListener('click',()=>{
 
 //~ adding local storage
 
+function saveTasks(){
+    const tasks=[];
 
+    // FIX: Added 'All' right here 👇
+    document.querySelectorAll('.task-card').forEach(card =>{
+        const tasktext=card.querySelector('.text').innerText;
+        const taskStatus=card.querySelector('.status_updater').value;
 
+        tasks.push({text:tasktext,status:taskStatus});
+    })
+    localStorage.setItem('Tasks_sam', JSON.stringify(tasks));
+}
+
+function loadTasks(){
+    const savedData=localStorage.getItem('Tasks_sam');
+    if(savedData){
+        const tasks=JSON.parse(savedData);
+        tasks.forEach(task=>{
+            const newCard = add_panel(task.text); 
+            newCard.querySelector('.status_updater').value = task.status; // Set the dropdown
+            const target_col = document.querySelector('.' + task.status);
+            if (target_col) {
+                target_col.appendChild(newCard);
+            }
+        })
+    }
+}
+window.addEventListener('beforeunload', () => {
+    saveTasks();
+});
 
 function add_panel(value_of_the_text){
     const newpanel = document.createElement('div');
@@ -98,9 +128,11 @@ function add_panel(value_of_the_text){
             editor.style.borderColor = '';
         }
     })
+
     Delete_btn.addEventListener('click',()=>{
         newpanel.remove();
     })
 
     return newpanel;
 }
+loadTasks();
