@@ -2,6 +2,12 @@ const add_button=document.querySelector('#add_btn');
 const text_input=document.querySelector('#input-task');
 const status_main =document.querySelector('.cool-select');
 
+const tasks_sel=document.querySelector('.tasks');
+const options={day:'numeric',month:'short'};
+const today =new Date().toLocaleDateString('en-GB',options);
+// today.style.color='red'
+// tasks_sel.style
+tasks_sel.textContent+=': '+ today;
 
 add_button.addEventListener('click',()=>{
     var value_of_the_text=text_input.value;
@@ -31,12 +37,9 @@ add_button.addEventListener('click',()=>{
 
 function saveTasks(){
     const tasks=[];
-
-    // FIX: Added 'All' right here 👇
     document.querySelectorAll('.task-card').forEach(card =>{
         const tasktext=card.querySelector('.text').innerText;
         const taskStatus=card.querySelector('.status_updater').value;
-
         tasks.push({text:tasktext,status:taskStatus});
     })
     localStorage.setItem('Tasks_sam', JSON.stringify(tasks));
@@ -48,7 +51,7 @@ function loadTasks(){
         const tasks=JSON.parse(savedData);
         tasks.forEach(task=>{
             const newCard = add_panel(task.text); 
-            newCard.querySelector('.status_updater').value = task.status; // Set the dropdown
+            newCard.querySelector('.status_updater').value = task.status; 
             const target_col = document.querySelector('.' + task.status);
             if (target_col) {
                 target_col.appendChild(newCard);
